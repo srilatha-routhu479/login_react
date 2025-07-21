@@ -16,13 +16,11 @@ function Login() {
 
     try {
       const response = await axios.post("https://login-react-7xp4.onrender.com/login", {
-  email,
-  password,
-});
+        email,
+        password,
+      });
 
-      
-
-      if (res.data.success) {
+      if (response.data.success) {
         navigate("/success");
       } else {
         navigate("/failure");
@@ -72,6 +70,5 @@ function Login() {
 }
 
 export default Login;
-
 
 
