@@ -15,10 +15,12 @@ function Login() {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:5000/login", {
-        email,
-        password,
-      });
+      const response = await axios.post("https://login-react-7xp4.onrender.com/login", {
+  email,
+  password,
+});
+
+      
 
       if (res.data.success) {
         navigate("/success");
